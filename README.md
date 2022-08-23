@@ -1,5 +1,28 @@
 # pdfTools
 
+Some tools to work with PDF files.
+
+## Interface
+
+| Method | Output | Description |
+|--|--|--|
+| `convert_pdf_to_text(file_name)` | the text of the pdf document | loads the given pdf file and outputs the contents in plain text. |
+| `get_pdf_text_between_two_strings(file_name, str0, str1)` | the text found between `str0` and `str1` | performs a search of the plain text pdf file and returns all occurances of text found in between the two `str0` and `str1` parameters |
+
+## Example
+
+Imagine we have a pdf file containing the text "Hello Mr Alderson," and you want to extract the name ("Mr Alderson"):
+
+```bash
+  python3 main.py example.pdf "Hello " ","
+```
+
+returns:
+
+```bash
+  Mr Alderson
+```
+
 ## Setup
 
 I strongly recommend setting up a python [virtual environment](https://docs.python.org/3/tutorial/venv.html).
